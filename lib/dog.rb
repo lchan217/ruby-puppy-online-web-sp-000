@@ -5,4 +5,9 @@ class Dog
     @name = name 
     @@all << name 
   end 
+  def self.all 
+    @@all.map do |name|
+      name 
+    end 
+  end 
 end 

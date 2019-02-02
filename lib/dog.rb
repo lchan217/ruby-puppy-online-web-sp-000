@@ -1,3 +1,4 @@
+require "pry"
 class Dog 
   @@all = []
   attr_accessor :name 
@@ -8,6 +9,7 @@ class Dog
   def self.all 
     @@all.map do |name|
       puts name.name
+      binding.pry
     end 
   end 
   def self.clear_all

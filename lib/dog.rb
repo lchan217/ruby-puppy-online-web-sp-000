@@ -1,19 +1,17 @@
-require "pry"
 class Dog 
   @@all = []
+  attr_accessor :name 
   def initialize(name)
     @name = name
-    @@all << self
-   end 
-  
-  attr_accessor :name
-  
+    
+    @@all << name 
+  end 
   def self.all 
-    @@all.each do |dog_name|
-      puts dog_name.name #if you don't have name, will return objectID
+    @@all.map do |name|
+      puts name 
     end 
   end 
   def self.clear_all
-    @@all.clear
+    @@all.clear 
   end 
 end 
